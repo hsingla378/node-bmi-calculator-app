@@ -3,7 +3,7 @@ const bodyParser = require("body-parser")
 const app = express()
 app.use(bodyParser.urlencoded({extended:true}))
 
-app.listen(3000, function(){
+app.listen(process.env.PORT || 3000, function(){
     console.log("Server has started at port 3000")
 })
 
